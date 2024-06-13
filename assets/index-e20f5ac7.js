@@ -1,0 +1,1 @@
+import{_ as c,i as t,a as e,v as n,w as _,c as o,A as r,b as d,F as l}from"./index-4d77b520.js";const i={};function p(u,f){const a=t("a-card");return e(),n(a,{class:"wrap"},{default:_(()=>[(e(),o(l,null,r(200,s=>d("div",{class:"snow",key:s})),64))]),_:1})}const x=c(i,[["render",p],["__scopeId","data-v-3e8aece3"]]);export{x as default};

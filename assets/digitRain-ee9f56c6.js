@@ -1,1 +1,0 @@
-import{_ as t,g as _,o as n,c as o,b as s}from"./index-48cad54f.js";const c={},a={class:"wrap"};function i(r,d){const e=_("DigitRain",!0);return n(),o("div",a,[s(e,{speedA:2})])}const f=t(c,[["render",i],["__scopeId","data-v-21136fbb"]]);export{f as default};

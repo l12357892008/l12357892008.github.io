@@ -1,1 +1,0 @@
-import{_ as c,g as t,o as e,t as n,w as _,c as o,z as r,a as d,F as l}from"./index-48cad54f.js";const p={};function i(u,f){const a=t("a-card");return e(),n(a,{class:"wrap"},{default:_(()=>[(e(),o(l,null,r(200,s=>d("div",{class:"snow",key:s})),64))]),_:1})}const x=c(p,[["render",i],["__scopeId","data-v-3e8aece3"]]);export{x as default};
