@@ -1,0 +1,15 @@
+var b=Object.defineProperty;var g=(r,a,t)=>a in r?b(r,a,{enumerable:!0,configurable:!0,writable:!0,value:t}):r[a]=t;var o=(r,a,t)=>(g(r,typeof a!="symbol"?a+"":a,t),t);import{d as k,r as T,j as _,l as L,D as f,g as c,o as N,c as B,a as C,b as l,y as H,w as m,_ as M}from"./index-48cad54f.js";import{S as E}from"./SettingOutlined-9879fe54.js";const I=k({__name:"typewriter",setup(r){class a{constructor(e){o(this,"dom");o(this,"txt","");o(this,"len",0);o(this,"index",0);o(this,"lastIndex",0);o(this,"validLen",0);o(this,"delayTime",0);o(this,"callBack");this.dom=e}init(e,n,s=10){const i=typeof e;if(i!=="number"&&i!=="string")throw new Error("txt参数必须为字符串或数字");if(e=String(e),e=e.trim(),e.length<1){this.dom.innerHTML="";return}this.dom.innerHTML="",this.txt=e,this.len=this.txt.length,this.callBack=n,this.index=0,this.preHandle(),this.delayTime=.2,s=Number(s),!isNaN(s)&&s>.3&&(this.delayTime=(s-.3)/this.validLen,this.delayTime=Math.ceil(this.delayTime*1e3)/1e3),this.updated()}preHandle(){this.lastIndex=0,this.validLen=0;for(let e=0;e<this.len;e++){const n=this.txt[e].charCodeAt(0);[10,13,9,32].includes(n)||(this.validLen++,this.lastIndex=e)}}updated(){const e=document.createDocumentFragment();for(let n=0;n<this.len;n++)e.append(this.createNewFont(n));this.dom.innerHTML="",this.dom.append(e)}createNewFont(e){const n=this.txt[e],s=n.charCodeAt(0);if([10,13].includes(s))return document.createElement("br");const i=document.createElement("div");return[9,32].includes(s)||(i.style.cssText=`
+                animation: type-writer 0.3s forwards;
+                animation-delay: ${this.delayTime*this.index++}s;
+                opacity: 0;
+                display:inline-block;
+            `),i.innerHTML=n,e===this.lastIndex&&typeof this.callBack=="function"&&i.addEventListener("animationend",this.callBack),i}}const t=T({txt:`    关关雎鸠，在河之洲。
+    窈窕淑女，君子好逑。
+    参差荇菜，左右流之。
+    窈窕淑女，寤寐求之。
+    求之不得，寤寐思服。
+    悠哉悠哉，辗转反侧。
+    参差荇菜，左右采之。
+    窈窕淑女，琴瑟友之。
+    参差荇菜，左右芼之。
+    窈窕淑女，钟鼓乐之。`,time:7,show:!1}),h=_(),p=_();let u;L(()=>{u=new a(p.value),u.init(t.txt,function(){f.success("打印完毕"),t.show=!0},t.time)});const x=()=>{t.show=!1,u.init(t.txt,function(){f.success("打印完毕"),t.show=!0},t.time)};return(w,e)=>{const n=c("a-textarea"),s=c("a-form-item"),i=c("a-input-number"),y=c("a-form"),v=c("a-modal");return N(),B("div",{class:"wrap",ref_key:"wrap",ref:h},[C("div",{class:"box",ref_key:"box",ref:p},null,512),l(H(E),{class:"setting",onClick:e[0]||(e[0]=d=>t.show=!0)}),l(v,{open:t.show,title:"修改配置","ok-text":"确定","cancel-text":"取消",onCancel:e[3]||(e[3]=d=>t.show=!1),onOk:x},{default:m(()=>[l(y,null,{default:m(()=>[l(s,{label:"文案"},{default:m(()=>[l(n,{value:t.txt,"onUpdate:value":e[1]||(e[1]=d=>t.txt=d),autosize:{minRows:4,maxRows:16}},null,8,["value"])]),_:1}),l(s,{label:"总打印时长"},{default:m(()=>[l(i,{id:"inputNumber",value:t.time,"onUpdate:value":e[2]||(e[2]=d=>t.time=d),min:1,max:10},null,8,["value"])]),_:1})]),_:1})]),_:1},8,["open"])],512)}}});const A=M(I,[["__scopeId","data-v-074ca5a8"]]);export{A as default};
